@@ -4,6 +4,17 @@ def call(Map config) {
         agent any
 
         stages {
+            stage('Checkout') {
+                steps {
+                    checkout([$class: 'GitSCM',
+                            branches: [[name: '*/main']],
+                            userRemoteConfigs: [[
+                                url: 'git@github.com:purbarinaldo/demoSharedLibrary.git',
+                                credentialsId: 'githubCred'
+                            ]]
+                    ])
+                }
+            }
 
             stage('Build') {
                 steps {
