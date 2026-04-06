@@ -1,0 +1,7 @@
+@Library('shared-lib') _
+pipelineTemplate(
+    appName: "Bank App 1",
+    buildCommand: "mvn clean install",
+    testCommand: "mvn test",
+    sonarCommand: "mvn sonar:sonar"
+)
