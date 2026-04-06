@@ -1,7 +1,9 @@
 @Library('demoSharedLibrary') _
 pipelineTemplate(
-    appName: "Bank App 1",
+    appName: "Bank App",
     buildCommand: "mvn clean install",
     testCommand: "mvn test",
-    sonarCommand: "mvn sonar:sonar"
+    sonarCommand: "mvn sonar:sonar",
+    deploy: true,
+    deployCommand: "echo deploy"
 )

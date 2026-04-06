@@ -25,13 +25,13 @@ def call(Map config) {
                 }
             }
 
-            /* if (config.deploy) {
+            if (config.deploy) {
                 stage('Deploy') {
                     steps {
                         sh config.deployCommand
                     }
                 }
-            } */
+            }
         }
     }
 }
