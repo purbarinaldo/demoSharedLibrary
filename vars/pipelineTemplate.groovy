@@ -25,11 +25,12 @@ def call(Map config) {
                 }
             }
 
-            if (config.deploy) {
-                stage('Deploy') {
-                    steps {
-                        sh config.deployCommand
-                    }
+            stage('Deploy') {
+                when {
+                    expression { config.deploy }
+                }
+                steps {
+                    sh config.deployCommand
                 }
             }
         }
