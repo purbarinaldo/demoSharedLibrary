@@ -1,4 +1,4 @@
-@Library('shared-lib') _
+@Library('demoSharedLibrary') _
 pipelineTemplate(
     appName: "Bank App 1",
     buildCommand: "mvn clean install",
